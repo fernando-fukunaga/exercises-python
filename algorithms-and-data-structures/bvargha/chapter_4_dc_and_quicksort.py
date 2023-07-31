@@ -27,8 +27,8 @@ def contador_lista(lista: List) -> int:
 4.3 - Encontre o valor mais alto em uma lista:
 '''
 def valor_mais_alto(lista: List[int]) -> int:
-    if len(lista) == 2:
+    if len(lista) == 2: # caso-base
         return lista[0] if lista[0] > lista[1] else lista[1]
     
-    mais_alto_tirando_indice = valor_mais_alto(lista[1:])
+    mais_alto_tirando_indice = valor_mais_alto(lista[1:]) # caso-recursivo
     return lista[0] if lista[0] > mais_alto_tirando_indice else mais_alto_tirando_indice
